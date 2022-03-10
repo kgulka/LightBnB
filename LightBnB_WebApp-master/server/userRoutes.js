@@ -13,6 +13,7 @@ module.exports = function(router, database) {
         return;
       }
       req.session.userId = user.id;
+      console.log("newuserid:", user.id)
       res.send("🤗");
     })
     .catch(e => res.send(e));
